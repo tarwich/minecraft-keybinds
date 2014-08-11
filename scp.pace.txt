@@ -1,0 +1,19 @@
+toggle(@pace);
+
+if(@pace);
+	setproperty(btnPace,"background","#80008000");
+	do;
+		keydown("forward");
+		wait(3000ms);
+		keyup("forward");
+		keydown("back");
+		wait(3000ms);
+		keyup("back");
+	while(@pace);
+else;
+	setproperty(btnPace,"background","#80000000");
+	keyup("back");
+	keyup("forward");
+	stop(%KEYID%);
+endif;
+
