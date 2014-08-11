@@ -1,0 +1,7 @@
+toggle(@idle);
+
+if(@idle);
+  setproperty(btnAntiIdle,"background","#80008000");
+else;
+  setproperty(btnAntiIdle,"background","#80000000");
+endif;

@@ -1,0 +1,21 @@
+
+#threshold=10;
+
+// ------------------------------
+
+if(%DURABILITY%<#threshold);
+    #imax=%CONTAINERSLOTS%;
+    if(#imax==0); #imax=9; endif;
+    getslotitem(%INVSLOT%,&target);
+    
+    for(#i,0,%#imax%);
+        getslotitem(%#i%,&item,#count,#damage);
+        slotclick(%#i%);
+        if((&item==&target) && (%DURABILITY%>#threshold));
+            break;
+        endif;
+    next;
+    
+    slotclick(#i);
+endif;
+

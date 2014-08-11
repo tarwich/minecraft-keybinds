@@ -1,0 +1,18 @@
+toggle(idle);
+
+if(idle);
+do;
+  keydown("forward");
+  wait(3000ms);
+  keyup("forward");
+  keydown("back");
+  wait(3000ms);
+  keyup("back");
+while(idle);
+endif;
+
+keyup("forward");
+keyup("back");
+stop("I");
+
+

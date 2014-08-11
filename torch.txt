@@ -1,0 +1,9 @@
+
+set(#oldslot, %INVSLOT%);
+pick("torch");
+wait(10ms);
+key("use");
+wait(10ms);
+slot(%#oldslot%);
+
+

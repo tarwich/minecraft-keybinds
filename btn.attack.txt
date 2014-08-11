@@ -1,0 +1,10 @@
+toggle(@attack);
+
+if(%@attack%);
+    setproperty(btnAttack,"background","#80008000");
+    do; key(attack); while(@attack);
+else;
+    setproperty(btnAttack,"background","#80000000");
+endif;
+
+stop(%KEYNAME%);

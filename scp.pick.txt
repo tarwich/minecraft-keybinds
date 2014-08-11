@@ -1,0 +1,28 @@
+
+// The block we're looking for
+&targetid=%HITID%;
+#targetdamage=%HITDATA%;
+
+getslot(%&targetid%:%#targetdamage%,#slotid);
+// Click the slot
+if(#slotid!=-1); slotclick(%#slotid%,L); endif;
+
+// Not in quick bar, check inventory
+if(#slotid=-1);
+  gui("inventory");
+  #invslot=35+%INVSLOT%;
+  // The slot in the quick bar that we're going to replace
+  getslot(%&targetid%:%#targetdamage%,#slotid);
+  if(#slotid!=-1);
+  	slotclick(%#invslot%,L);
+  	slotclick(%#slotid%,L);
+  	slotclick(%#invslot%,L);
+  endif;
+  gui();
+endif;
+
+// Not found, pass to client
+if(#slotid=-1);
+  key("pick");
+endif;
+

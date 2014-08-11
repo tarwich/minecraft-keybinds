@@ -1,0 +1,27 @@
+// - Open Furnace ----------
+key("use");
+do; wait(100ms); while(%CONTAINERSLOTS%=0);
+
+// - Check Fuel ------------
+getslotitem(1,#coal,#count);
+if(#count<64);
+  // - Add Fuel --------------
+  getslot("coal:0",#coal,3);
+  if(!#coal); getslot("coal:1",#coal,3); endif;
+  
+  if(#coal>-1);
+    slotclick(%#coal%,l,true);
+    wait(250ms);
+  endif;
+endif;
+
+// - Get Goods -------------
+getslotitem(2,#item,#count);
+if(#count>0);
+  slotclick(2,l,true);
+  wait(250ms);
+endif;
+
+// - Close Furnace ---------
+gui();
+

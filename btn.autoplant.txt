@@ -1,0 +1,17 @@
+toggle(on);
+
+if(on);
+  setproperty(btnAutoplant,"background","#80008000");
+  do;
+    #pitch=%PITCH%;
+    look(+0,90,0);
+    key("use");
+    look(+0,%#pitch%,0);
+    wait(100ms);
+  while(on);
+else;
+  setproperty(btnAutoplant,"background","#80800000");
+endif;
+
+stop(%KEYNAME%);
+

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<variables>
+    <config name="@default">
+        <!-- KEY_R -->
+        <template id="19">
+            <int key="slotid">5</int>
+            <int key="targetdamage">0</int>
+            <int key="invslot">40</int>
+            <string key="targetid">fence_gate</string>
+        </template>
+        <!-- KEY_F -->
+        <template id="33">
+            <boolean key="oldslot">1</boolean>
+            <int key="old">7</int>
+            <int key="oldslot">7</int>
+        </template>
+        <!-- KEY_G -->
+        <template id="34">
+            <int key="oldslot">7</int>
+        </template>
+        <!-- KEY_H -->
+        <template id="35">
+            <int key="min">1</int>
+            <int key="increment">0</int>
+            <int key="count">512</int>
+            <int key="durability">99</int>
+            <int key="data">10</int>
+            <int key="damage">2</int>
+            <int key="threshold">100</int>
+            <int key="i">6</int>
+            <int key="nextbid">10</int>
+            <int key="bidStep">0</int>
+            <int key="bidMin">1</int>
+            <int key="slotid">-1</int>
+            <int key="durbility">999</int>
+            <int key="start">0</int>
+            <int key="sec">0</int>
+            <int key="bidstep">5</int>
+            <int key="imax">9</int>
+            <int key="timeleft">0</int>
+            <int key="bidstart">10</int>
+            <string key="min"/>
+            <string key="id">air</string>
+            <string key="increment"/>
+            <string key="count"/>
+            <string key="what"/>
+            <string key="item">Birch Plank</string>
+            <string key="target">stone_pickaxe</string>
+            <string key="chat">Finn_dragon is auctioning 1 damaged enchanted Iron Sword named "Iron Sword" for 0 min, 5 sec. Starting bid: $1. Bid increment: $1. Type /auction info for full details.</string>
+            <string key="who">ERROR</string>
+        </template>
+        <!-- KEY_C -->
+        <template id="46">
+            <int key="count">0</int>
+            <int key="coal">27</int>
+            <int key="item">0</int>
+        </template>
+        <!-- KEY_INSERT -->
+        <template id="210">
+            <int key="coal">-1</int>
+            <int key="item">0</int>
+        </template>
+        <!-- KEY_RMOUSE -->
+        <template id="251">
+            <int key="count">63</int>
+            <int key="data">0</int>
+            <string key="id">sand</string>
+            <string key="count">58</string>
+            <string key="data">0</string>
+            <string key="use_key">RMOUSE</string>
+        </template>
+        <!-- KEY_MIDDLEMOUSE -->
+        <template id="252">
+            <int key="slotid">15</int>
+            <int key="targetdamage">0</int>
+            <int key="invslot">7</int>
+            <string key="targetid">dirt</string>
+        </template>
+        <!-- CONTROL_BTNAFK -->
+        <template id="261">
+            <string key="chat">(someone [something] -&gt; no) This is a test</string>
+            <string key="who">ERROR</string>
+        </template>
+        <!-- CONTROL_BTNAUTOPLANT -->
+        <template id="279">
+            <int key="yaw">91</int>
+            <int key="yaw-">360</int>
+            <int key="pitch">356</int>
+        </template>
+        <!-- EVENT_ONCHAT -->
+        <template id="1001">
+            <int key="min">0</int>
+            <int key="bidStep">0</int>
+            <int key="increment">0</int>
+            <int key="bidMin">1</int>
+            <int key="count">1</int>
+            <int key="start">0</int>
+            <int key="sec">10</int>
+            <int key="bidstep">1</int>
+            <int key="timeleft">-9</int>
+            <int key="bidstart">1</int>
+            <string key="min"/>
+            <string key="increment"/>
+            <string key="count"/>
+            <string key="what"/>
+            <string key="item">damaged enchanted Iron Sword named "Iron Sword"</string>
+            <string key="chat">[floAuction] Auction has 30 sec remaining.</string>
+            <string key="who">ERROR</string>
+        </template>
+        <!-- EVENT_ONITEMDURABILITYCHANGE -->
+        <template id="1011">
+            <int key="id">0</int>
+            <int key="slotid">-1</int>
+            <int key="count">14</int>
+            <int key="durbility">999</int>
+            <int key="durability">83</int>
+            <int key="damage">0</int>
+            <int key="data">55</int>
+            <int key="imax">9</int>
+            <int key="i">0</int>
+            <int key="threshold">10</int>
+            <string key="id">stone_pickaxe</string>
+            <string key="item">torch</string>
+            <string key="target">stone_axe</string>
+        </template>
+    </config>
+</variables>

@@ -1,0 +1,9 @@
+toggle(za);
+
+if(za);
+    setLabel(lblZa, "Opted In");
+    echo("/za OptIn");
+else;
+    setLabel(lblZa, "Opted Out");
+    echo("/za OptOut")
+endif;

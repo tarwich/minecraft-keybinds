@@ -1,0 +1,9 @@
+toggle(@afk);
+
+if(@afk);
+  setproperty(btnAFK,"background","#80008000");
+else;
+  setproperty(btnAFK,"background","#80000000");
+endif;
+
+

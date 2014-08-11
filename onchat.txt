@@ -1,0 +1,22 @@
+strip(@&chat,%CHAT%);
+
+// - Unafk ----------------------
+if(@afk);
+  &who="ERROR";
+  match(%@&chat%,"(\w+).*-> me",{&who});
+  
+  if((%&who%!="ERROR") && (%&who%!="Console"));
+    echo("/tell %&who% I'm actually AFK right now");
+  endif;
+endif;
+
+// - Auto Reply -----------------
+if(@idle);
+  &who="ERROR";
+  match(%@&chat%,"(\w+)\W*is now AFK",{&who});
+  if(&who="samdillow");
+    echo("/afk");
+  endif;
+endif;
+
+exec("scp.auctioninfo.txt", "auction");

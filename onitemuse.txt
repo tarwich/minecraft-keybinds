@@ -1,0 +1,9 @@
+
+// ------------------------------
+//key("use");
+
+//getslotitem(%INVSLOT%,&id,&count,&data);
+//log(%KEYNAME%, %&id% . %&count% . %DURABILITY% . %&data%);
+
+//$i:$d
+
