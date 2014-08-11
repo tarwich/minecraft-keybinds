@@ -1,28 +1,34 @@
 
+// Set this to the slot (1-9) that you want pick to always use, or 0 for 
+// current slot
+#targetslot=6;
+
+// ------------------------------
+
 // The block we're looking for
-&targetid=%HITID%;
-#targetdamage=%HITDATA%;
-
+if(#targetslot==0); #targetslot=%INVSLOT%; endif;
 getslot(%&targetid%:%#targetdamage%,#slotid);
-// Click the slot
-if(#slotid!=-1); slotclick(%#slotid%,L); endif;
 
-// Not in quick bar, check inventory
-if(#slotid=-1);
-  gui("inventory");
-  #invslot=35+%INVSLOT%;
-  // The slot in the quick bar that we're going to replace
-  getslot(%&targetid%:%#targetdamage%,#slotid);
-  if(#slotid!=-1);
-  	slotclick(%#invslot%,L);
-  	slotclick(%#slotid%,L);
-  	slotclick(%#invslot%,L);
-  endif;
-  gui();
+// Click the slot
+if(#slotid!=-1); 
+	slotclick(%#slotid%,L); 
+else;
+	// Not in quick bar, check inventory
+	gui("inventory");
+	#invslot=35+%#targetslot%;
+	// The slot in the quick bar that we're going to replace
+	getslot(%HITID%:%HITDATA%,#slotid);
+	if(#slotid!=-1);
+		slotclick(%#invslot%,L);
+		slotclick(%#slotid%,L);
+		slotclick(%#invslot%,L);
+	endif;
+	gui();
+	pick(%HITID%:%HITDATA%);
 endif;
 
 // Not found, pass to client
-if(#slotid=-1);
-  key("pick");
+if(#slotid==-1);
+	key("pick");
 endif;
 
