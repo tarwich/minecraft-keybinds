@@ -5,19 +5,27 @@
 
 // ------------------------------
 
-// The block we're looking for
+
 if(#targetslot==0); #targetslot=%INVSLOT%; endif;
-getslot(%&targetid%:%#targetdamage%,#slotid);
+
+// The block we're looking for
+&base_id=%HITID%;
+match(%HITID%,".*_(\\w+)",{&base_id});
+getslot(%HITID%:%#HITDATA%,#slotid);
+// log(%HITID% - %&base_id%);
+if(#slotid==-1); getslot(%&base_id%,#slotid); endif;
 
 // Click the slot
-if(#slotid!=-1); 
-	slotclick(%#slotid%,L); 
+if(#slotid>-1); 
+	slotclick(%#slotid%,L);
 else;
 	// Not in quick bar, check inventory
 	gui("inventory");
 	#invslot=35+%#targetslot%;
 	// The slot in the quick bar that we're going to replace
 	getslot(%HITID%:%HITDATA%,#slotid);
+	if(#slotid==-1); getslot(%&base_id%,#slotid); endif;
+	
 	if(#slotid!=-1);
 		slotclick(%#invslot%,L);
 		slotclick(%#slotid%,L);
@@ -29,6 +37,7 @@ endif;
 
 // Not found, pass to client
 if(#slotid==-1);
+	log(%HITID% . %&base_id%);
 	key("pick");
 endif;
 
