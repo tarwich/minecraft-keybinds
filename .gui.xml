@@ -57,7 +57,7 @@
                 <visible>1</visible>
             </gc:button>
             <gc:button id="263" name="btnPace" x="4" y="5">
-                <background>#B0000000</background>
+                <background>#80000000</background>
                 <colour>#00FF00</colour>
                 <hide>0</hide>
                 <sticky>1</sticky>
@@ -84,7 +84,16 @@
     </gc:guilayout>
     <!-- Config for layout 'inchat' -->
     <gc:guilayout columns="6" display="inchat" dots="false" grid="false" name="inchat" padding="2" rows="10">
-        <gc:controls/>
+        <gc:controls>
+            <gc:button id="280" name="btnPace" x="5" y="6">
+                <background>#B0000000</background>
+                <colour>#00FF00</colour>
+                <hide>0</hide>
+                <sticky>1</sticky>
+                <text>Pace</text>
+                <visible>1</visible>
+            </gc:button>
+        </gc:controls>
     </gc:guilayout>
     <!-- Config for layout 'ingame' -->
     <gc:guilayout columns="25" display="ingame" dots="false" grid="false" name="ingame" padding="1" rows="15">
@@ -100,7 +109,7 @@
                 <binding/>
                 <colour>#00FF00</colour>
                 <shadow>1</shadow>
-                <text>56 Obsidian\n$0 + $100 (0s)</text>
+                <text>1 enchanted Diamond Chestplate named "Towncraft Party Shirt"\n$56 + $57 (0s)</text>
                 <visible>0</visible>
             </gc:label>
             <gc:label colspan="3" id="264" name="LABEL 264" x="0" y="1">
@@ -124,7 +133,7 @@
             <gc:label colspan="6" id="266" name="LABEL 266" x="0" y="0">
                 <align>top left</align>
                 <background>#01000000</background>
-                <binding>%ITEM%: %DURABILITY%</binding>
+                <binding>%ITEM%:%ITEMDAMAGE% %DURABILITY%</binding>
                 <colour>#00FF00</colour>
                 <shadow>1</shadow>
                 <text>%%</text>
