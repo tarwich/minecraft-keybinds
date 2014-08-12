@@ -223,9 +223,6 @@ script.warn.permissions.enabled=0
 # KEY_BACK
 Macro[14].Macro=/home
 
-# KEY_R
-Macro[19].Macro=$${$$<scp.pick.txt>}$$
-
 # KEY_F
 Macro[33].Macro=$${set(#old, %INVSLOT%); slot(8);}$$
 Macro[33].OnKeyHeld=$${key(use)}$$
@@ -241,7 +238,7 @@ Macro[35].Macro=$${$$<scp.auctioninfo.txt>}$$
 
 # KEY_SEMICOLON
 Macro[39].Macro=$${$$?}$$
-Macro[39].Param=craft(detector_rail)
+Macro[39].Param=log(itemid(wall_sign));
 
 # KEY_C
 Macro[46].Macro=$${$$<furnace.txt>}$$
@@ -261,7 +258,7 @@ Macro[251].OnKeyUp=$${$$<onitemuse.txt>}$$
 Macro[251].RepeatRate=200
 
 # KEY_MIDDLEMOUSE
-Macro[252].Macro=$${$$<btn.middlemouse.txt>}$$
+Macro[252].Macro=$${$$<scp.pick.txt>}$$
 Macro[252].Override=1
 
 # CONTROL_BUTTON 258
@@ -276,12 +273,18 @@ Macro[261].Macro=$${$$<btn.afk.txt>}$$
 # CONTROL_BTNANTIIDLE
 Macro[262].Macro=$${$$<btn.antiidle.txt>}$$
 
+# CONTROL_BTNPACE
+Macro[263].Macro=$${$$<scp.pace.txt>}$$
+
 # CONTROL_BUTTON 278
 Macro[278].Macro=/mondo find $$i:$$d
 Macro[278].Item=wheat_seeds
 
 # CONTROL_BTNAUTOPLANT
 Macro[279].Macro=$${$$<btn.autoplant.txt>}$$
+
+# CONTROL_BTNPACE
+Macro[280].Macro=$${$$<scp.pace.txt>}$$
 
 # EVENT_ONCHAT
 Macro[1001].Macro=$${$$<onchat.txt>}$$
