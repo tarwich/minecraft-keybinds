@@ -19,4 +19,4 @@ if(@idle);
   endif;
 endif;
 
-exec("scp.auctioninfo.txt", "auction");
+exec("scp.auctioninfo.txt","auction");
