@@ -1,17 +1,25 @@
 toggle(on);
 
+#hunger_limit=14;
+
 if(on);
-  setproperty(btnAutoplant,"background","#80008000");
-  do;
-    #pitch=%PITCH%;
-    look(+0,90,0);
-    key("use");
-    look(+0,%#pitch%,0);
-    wait(100ms);
-  while(on);
+	setproperty(btnAutoplant,"background","#80008000");
+	do;
+		if(%HUNGER%<%#hunger_limit%); 
+			#slot=%INVSLOT%;
+			slot(8);
+			do; key("use"); sleep(1); while(%HUNGER%<%#hunger_limit%);
+			slot(%#slot%);
+		endif;
+		
+		key("use");
+		wait(150ms);
+		key("attack");
+		wait(150ms);
+	while(on);
 else;
-  setproperty(btnAutoplant,"background","#80800000");
+	setproperty(btnAutoplant,"background","#80800000");
+	stop(%KEYID%);
 endif;
 
-stop(%KEYNAME%);
 
