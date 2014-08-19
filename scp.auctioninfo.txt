@@ -1,9 +1,5 @@
 
 // - Auction Info ---------------
-if(%KEYNAME%="H");
-  @&chat="[10:45:17] [Client thread/INFO]: [CHAT] [floAuction] ScriptJunkie is auctioning 512 Birch Plank for 1 min, 0 sec. Starting bid: $10. Bid increment: $5. Type /auction info for full details.";
-endif;
-
 ifmatches(%@&chat%,"is auctioning \d+");
   #count=0; @&auctionitem=""; #min=0; #sec=0; #bidstart=0; @auctionbidstep=0;
   match(%@&chat%,"is auctioning (\d+) (.*) for (\d+) min, (\d+) sec. Starting bid: \$(\d+). Bid increment: \$(\d+).",{#count,@&auctionitem,#min,#sec,#bidstart,@auctionbidstep});
@@ -42,15 +38,15 @@ endif;
 ifmatches(%@&chat%, "auction cancelled");
   @#auctiontime=0;
   setproperty(lblAuctionIngame,"visible",false);
-  stop(%KEYNAME%);
+  stop(%KEYID%);
 endif;
 ifmatches(%@&chat%, "auction ended");
   @#auctiontime=0;
   setproperty(lblAuctionIngame,"visible",false);
-  stop(%KEYNAME%);
+  stop(%KEYID%);
 endif;
 ifmatches(%@&chat%, "won the auction");
   @#auctiontime=0;
   setproperty(lblAuctionIngame,"visible",false);
-  stop(%KEYNAME%);
+  stop(%KEYID%);
 endif;
